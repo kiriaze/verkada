@@ -2,35 +2,35 @@ import Swiper from 'swiper';
 
 const carousels = () => {
 
-	// pagination
-	let carouselPagination = (swiper) => {
+	// // pagination
+	// let carouselPagination = (swiper) => {
 
-		// console.log(swiper, swiper.activeIndex, swiper.passedParams.slidesPerView);
-		// pulled from swiper.js pagination..
-		let total = swiper.params.loop ? Math.ceil((slidesLength - (swiper.loopedSlides * 2)) / swiper.params.slidesPerGroup) : swiper.snapGrid.length;
-		let current = swiper.activeIndex || 0;
-		// console.log((current + 1), total, swiper.snapIndex);
+	// 	// console.log(swiper, swiper.activeIndex, swiper.passedParams.slidesPerView);
+	// 	// pulled from swiper.js pagination..
+	// 	let total = swiper.params.loop ? Math.ceil((slidesLength - (swiper.loopedSlides * 2)) / swiper.params.slidesPerGroup) : swiper.snapGrid.length;
+	// 	let current = swiper.activeIndex || 0;
+	// 	// console.log((current + 1), total, swiper.snapIndex);
 
-		current     = (current + 1) < 10 ? `0${(current + 1)}` : (current + 1);
-		total       = total < 10 ? `0${total}` : total;
+	// 	current     = (current + 1) < 10 ? `0${(current + 1)}` : (current + 1);
+	// 	total       = total < 10 ? `0${total}` : total;
 
-		let $pagiCurrent = swiper.el.querySelector('.carousel-pagination-current');
-		let $pagiTotal   = swiper.el.querySelector('.carousel-pagination-total');
+	// 	let $pagiCurrent = swiper.el.querySelector('.carousel-pagination-current');
+	// 	let $pagiTotal   = swiper.el.querySelector('.carousel-pagination-total');
 
-		let $progressBar = swiper.el.querySelector('.progress-bar__fill');
+	// 	let $progressBar = swiper.el.querySelector('.progress-bar__fill');
 
-		if ( $pagiCurrent ) $pagiCurrent.innerText = current;
-		if ( $pagiTotal ) $pagiTotal.innerText     = total;
+	// 	if ( $pagiCurrent ) $pagiCurrent.innerText = current;
+	// 	if ( $pagiTotal ) $pagiTotal.innerText     = total;
 
-		let progress = (current / total * 100);
-		if ( $progressBar ) {
-			// $progressBar.style = `width: ${progress}%`;
-			$progressBar.style = `
-				transform: translate3d(0px, 0px, 0px) scaleX( ${(current / total)} ) scaleY(1);
-				transition-duration: 300ms;
-			`;
-		}
-	}
+	// 	let progress = (current / total * 100);
+	// 	if ( $progressBar ) {
+	// 		// $progressBar.style = `width: ${progress}%`;
+	// 		$progressBar.style = `
+	// 			transform: translate3d(0px, 0px, 0px) scaleX( ${(current / total)} ) scaleY(1);
+	// 			transition-duration: 300ms;
+	// 		`;
+	// 	}
+	// }
 
 	// single item carousels
 	[...document.querySelectorAll('[data-carousel="news"]')].map((el, index) => {
@@ -40,6 +40,14 @@ const carousels = () => {
 			// effect: 'fade',
 			// loopedSlides: 4,
 			centeredSlides: true,
+
+			// // lazy
+			// // Disable preloading of all images
+			// preloadImages: false,
+			// // Enable lazy loading
+			// lazy: true,
+			// watchSlidesVisibility: true,
+			// // 
 
 			spaceBetween: 20,
 			slidesPerView: 1.5,

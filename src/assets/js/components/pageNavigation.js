@@ -1,4 +1,5 @@
 // ajax page content injection, loading animation/transitions, and history state.
+// possibly abstract into a router and page transition components
 import gsap from 'gsap';
 class pageNavigation {
 	

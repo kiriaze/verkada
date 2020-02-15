@@ -14,6 +14,7 @@ const preloader = () => {
 	let defaultTime = 500; // defaults to .5s
 	let width = 100,
 		perfData = window.performance.timing, // The PerformanceTiming interface represents timing-related performance information for the given page.
+		// EstimatedTime should also cover assets like fonts, in place of fontloader
 		EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
 		time = parseInt((EstimatedTime/1000)%60)*100;
 		time = time < defaultTime ? defaultTime : time;

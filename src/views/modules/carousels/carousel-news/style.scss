@@ -26,9 +26,6 @@
 		padding: 1rem;
 		position: relative;
 		text-align: center;
-		// margin: 0 1.5rem;
-		// width: 100%;
-		// max-width: calc(100%/4); // 40.5rem
 		background-color: white;
 		box-shadow: 0 1.6rem 3.2rem 0 rgba(205, 204, 216, 0.52);
 		transition: color .35s ease,
@@ -46,9 +43,8 @@
 			background-image: linear-gradient(transparent, map-get($colors, brand-primary) 50%);
 		}
 		img {
-			display: block;
 			width: 100%;
-			padding-bottom: 80%;
+			display: block;
 			background-color: map-get($colors, brand-primary);
 			transition: background-color .35s ease;
 		}

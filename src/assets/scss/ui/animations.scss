@@ -10,6 +10,7 @@
 	}
 }
 
+// scroll cta
 @keyframes pulse {
 	50% {
 		// background: transparent;
@@ -19,5 +20,37 @@
 		// transform: none;
 		transform: scale3d(1.2, 1.2, 1);
 		border-color: transparent;
+	}
+}
+
+// explicit animations to lazyload
+@keyframes mqn-swipe-zoom-up {
+	0% {
+		opacity: 0;
+	}
+	1% {
+		opacity: 1;
+		transform: scale(1.15);
+		clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+
+// explicit animations to lazyload
+@keyframes mqn-swipe-up {
+	0% {
+		opacity: 0;
+	}
+	1% {
+		opacity: 1;
+		clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+	}
+	100% {
+		opacity: 1;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
 }

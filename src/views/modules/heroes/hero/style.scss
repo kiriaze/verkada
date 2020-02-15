@@ -23,11 +23,7 @@
 	}
 	&__content {
 		@include mq('medium') {
-			flex-grow: 0;
-			flex-basis: 50%;
-			max-width: 50%;
-			padding-left: 1rem;
-			padding-right: 1rem;
+			@include grid-col(6/12);
 		}
 	}
 	&__circle-line {
@@ -65,8 +61,5 @@
 	.scroll-cta {
 		margin-top: 8vw;
 		margin-bottom: 8vw;
-		// margin-bottom: 8rem;
-		// @include mq('medium') {
-		// }
 	}
 }

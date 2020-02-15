@@ -33,12 +33,7 @@
 		text-align: center;
 		@include mq('medium') {
 			text-align: left;
-			max-width: calc(100%/3);
-			flex-grow: 0;
-			flex-basis: calc(100%/3);
-			max-width: calc(100%/3);
-			padding-left: 1rem;
-			padding-right: 1rem;
+			@include grid-col(4/12);
 		}
 	}
 	&__media {
@@ -46,12 +41,8 @@
 		width: 100%;
 		@include mq('medium') {
 			margin-top: 0;
-			flex-grow: 0;
-			flex-basis: calc(((100%/3)*2) - (100%/12));
-			max-width: calc(((100%/3)*2) - (100%/12));
-			padding-left: 1rem;
-			padding-right: 1rem;
-			margin-left: calc(100%/12);
+			@include grid-col(8/12);
+			@include grid-shift(1/12);
 		}
 	}
 	.video-wrapper {
