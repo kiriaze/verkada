@@ -52,15 +52,3 @@
 		}
 	}
 }
-
-@keyframes pulse {
-	50% {
-		// background: transparent;
-		border-color: rgba(230,230,230,.3);
-	}
-	to {
-		// transform: none;
-		transform: scale3d(1.2, 1.2, 1);
-		border-color: transparent;
-	}
-}

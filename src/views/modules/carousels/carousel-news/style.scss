@@ -8,6 +8,15 @@
 			@extend :hover;
 		}
 	}
+	.swiper-wrapper {
+		cursor: grab;
+		&:active {
+			cursor: grabbing;
+		}
+		.button {
+			// cursor: pointer;
+		}
+	}
 	.swiper-pagination {
 		bottom: 0;
 		margin-top: 6rem;

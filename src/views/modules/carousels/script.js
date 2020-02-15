@@ -35,7 +35,7 @@ const carousels = () => {
 	// single item carousels
 	[...document.querySelectorAll('[data-carousel="news"]')].map((el, index) => {
 		let swiperInstance = new Swiper(el, {
-			speed: 500,
+			speed: 800,
 			loop: true,
 			// effect: 'fade',
 			// loopedSlides: 4,
