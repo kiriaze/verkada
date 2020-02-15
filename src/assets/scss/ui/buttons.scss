@@ -15,7 +15,7 @@
 		color: white;
 		background-color: map-get($colors, brand-secondary);
 	}
-	&__ghost {
+	&--ghost {
 		background-color: transparent;
 		color: map-get($colors, brand-primary);
 		border: .1rem solid map-get($colors, base-light);
@@ -24,7 +24,7 @@
 			background-color: map-get($colors, brand-primary);
 		}
 	}
-	&__inverted {
+	&--inverted {
 		background-color: map-get($colors, brand-secondary);
 		&:hover {
 			color: white;
