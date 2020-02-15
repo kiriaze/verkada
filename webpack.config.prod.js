@@ -81,6 +81,11 @@ const config = {
 				from: '../.htpasswd',
 				to: '.htpasswd',
 				toType: 'file'
+			},
+			{
+				from: '../CNAME',
+				to: 'CNAME',
+				toType: 'file'
 			}
 		], {
 			// debug: true
