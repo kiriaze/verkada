@@ -29,7 +29,6 @@ import utility from './utils/utility.js';
 // 
 import ui from './components/ui.js';
 // import preloader from './components/preloader.js';
-import skrolly from './components/skrolly.js';
 import pageNavigation from './components/pageNavigation.js';
 import smoothScrolling from './components/smoothScrolling.js';
 
@@ -64,9 +63,6 @@ class App {
 
 	modules() {
 		ui();
-		skrolly({
-
-		});
 		carousels();
 	}
 
