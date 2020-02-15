@@ -29,6 +29,7 @@ Run `npm run deploy` to deploy the production ready bundle to location defined w
 - To deploy to github pages; `git subtree push --prefix dist origin gh-pages`
 	- Might need to change some relative paths from root in regards to the repo name / gh-branch; e.g. assets would be pointing to kiriaze.github.com/verkada as root, so kiriaze.github.com/verkada/assets/css/etc..
 	- so use repo paths; e.g. /repoName/assets/etc.. but only for gh-pages..build a function that swaps em or passes them in depending on whether we're pushing to gh pages? or access url/base and check whether its a github.io path, or rather the entire base url and use that as the prefix for pathing?
+	- or add custom domain to gh-pages that point to subdomain; e.g. reponame.domain.com, which should all point correctly off of root relative 
 ---
 
 ## License
