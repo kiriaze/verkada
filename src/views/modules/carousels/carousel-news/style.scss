@@ -1,0 +1,86 @@
+.carousel {
+	overflow: hidden;
+	.swiper-container {
+		overflow: visible;
+	}
+	.swiper-slide-active {
+		.item {
+			@extend :hover;
+		}
+	}
+	.swiper-pagination {
+		bottom: 0;
+		margin-top: 6rem;
+		position: relative;
+	}
+	.item {
+		padding: 1rem;
+		position: relative;
+		text-align: center;
+		// margin: 0 1.5rem;
+		// width: 100%;
+		// max-width: calc(100%/4); // 40.5rem
+		background-color: white;
+		box-shadow: 0 1.6rem 3.2rem 0 rgba(205, 204, 216, 0.52);
+		transition: color .35s ease,
+					background-color .35s ease;
+		&:before {
+			content: '';
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 35%;
+			z-index: 1;
+			position: absolute;
+			opacity: 0;
+			transition: opacity .35s ease;
+			background-image: linear-gradient(transparent, map-get($colors, brand-primary) 50%);
+		}
+		img {
+			display: block;
+			width: 100%;
+			padding-bottom: 80%;
+			background-color: map-get($colors, brand-primary);
+			transition: background-color .35s ease;
+		}
+		.button {
+			opacity: 0;
+			visibility: hidden;
+			left: 50%;
+			bottom: 0;
+			position: absolute;
+			z-index: 1;
+			transition: all .35s ease;
+			transform: translate3d(-50%, 0%, 0);
+		}
+		&__copy {
+			padding: 3.2vw 2.4vw;
+			h5 {
+				line-height: 1.6;
+			}
+			p {
+				position: relative;
+				margin: 2rem 0 0;
+				transition: color .35s ease;
+				@include fluid-scale(font-size, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xlarge'), 14px, 16px);
+			}
+		}
+		&:hover {
+			@extend .dark;
+			color: white;
+			background-color: map-get($colors, brand-primary);
+			box-shadow: 0 40px 56px 0 rgba(205, 204, 216, 0.5);
+			&:before {
+				opacity: 1;
+			}
+			img {
+				background-color: white;
+			}
+			.button {
+				opacity: 1;
+				visibility: visible;
+				transform: translate3d(-50%, -70%, 0);
+			}
+		}
+	}
+}

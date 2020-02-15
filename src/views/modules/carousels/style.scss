@@ -1,0 +1,27 @@
+@import 'carousel-news/style';
+
+// bullets
+.swiper-pagination-bullet {
+	width: .8rem;
+	height: .8rem;
+	opacity: 0.2;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 100%;
+	margin: 0 0.8rem !important;
+	background-color: map-get($colors, brand-primary);
+	transition: transform .35s ease;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+	cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+	opacity: 1;
+	// width: 1.4rem;
+	// height: 1.4rem;
+	transform: scale(1.8);
+	background-color: map-get($colors, brand-secondary);
+}
+// 

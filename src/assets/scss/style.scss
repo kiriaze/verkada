@@ -1,0 +1,26 @@
+// Base
+@import './configs/style';
+@import './mixins/style';
+@import './global/style';
+@import './patterns/style';
+
+// Node Plugins
+// @import '~magnific-popup/dist/magnific-popup.css';
+@import '~swiper/css/swiper.min.css';
+
+// UI
+@import 'ui/lazyload';
+@import 'ui/skrolly';
+@import 'ui/buttons';
+@import 'ui/animations';
+@import 'ui/scroll-cta';
+@import 'ui/social-channels';
+
+// Layout
+@import 'layout/general';
+@import 'layout/header';
+@import 'layout/footer';
+
+// Modules
+// note: either load mod styles here or explicitly line by line or within app.js
+@import '../../views/modules/style';

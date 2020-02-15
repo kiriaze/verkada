@@ -1,0 +1,66 @@
+.scroll-cta {
+	position: relative;
+	width: 16rem;
+	height: 16rem;
+	display: flex;
+	font-size: 1.6rem;
+	align-items: center;
+	letter-spacing: -.05rem;
+	justify-content: center;
+	transition: color .35s ease;
+	
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		border-radius: 50%;
+		border: .1rem solid rgba(15, 17, 32, 0.15);
+		transform: scale3d(0.9, 0.9, 0);
+		transition: opacity .75s,
+					transform .35s ease;
+	}
+
+	&:before {
+		transform: scale(.9);
+		background: transparent;
+		border-color: rgba(15, 17, 32, 0.15);
+	}
+
+	&:after {
+		animation: pulse 1.5s .85s infinite ease-out;
+	}
+	
+	span {
+
+	}
+
+	&:hover {
+		&:before {
+			transform: scale(1);
+			box-shadow: 0rem 0rem 0.5rem rgba(15, 17, 32, 0.15);
+		}
+		&:after {
+			transform: scale(1);
+			// animation-play-state: paused;
+		}
+		span {
+
+		}
+	}
+}
+
+@keyframes pulse {
+	50% {
+		// background: transparent;
+		border-color: rgba(230,230,230,.3);
+	}
+	to {
+		// transform: none;
+		transform: scale3d(1.2, 1.2, 1);
+		border-color: transparent;
+	}
+}

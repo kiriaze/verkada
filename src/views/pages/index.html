@@ -1,0 +1,24 @@
+{% extends 'views/templates/base.twig' %}
+
+{% block content %}
+
+	{% include 'views/modules/heroes/hero/template.twig' %}
+	{% include 'views/modules/splits/split-intro/template.twig' %}
+
+	<section class="fw-section callout">
+		{% include 'views/globals/blurb.twig' with {
+			heading: 'Our Expertises',
+			copy: "We're the content, research and design team at Oxford. We help riders move, restaurants grow and customers eat in over 200 cities around the world."
+		} %}
+		{% include 'views/modules/callouts/features/template.twig' %}
+	</section>
+
+	<section class="fw-section callout carousel carousel--news">
+		{% include 'views/globals/blurb.twig' with {
+			heading: 'Latest News',
+			copy: "We're the content, research and design team at Oxford. We help riders move, restaurants grow and customers eat in over 200 cities around the world."
+		} %}
+		{% include 'views/modules/carousels/carousel-news/template.twig' %}
+	</section>
+
+{% endblock %}

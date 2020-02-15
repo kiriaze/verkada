@@ -1,0 +1,123 @@
+////////////////////////////////////////////
+// General Layout
+////////////////////////////////////////////
+
+html,
+body {
+	// // smoothScrolling
+	// height: auto;
+}
+
+html {
+	// @include mq('xxxlarge') {
+	// 	font-size: 11px;
+	// }
+
+	&.is-loading {
+		cursor: progress;
+	}
+	&.has-loaded {
+		
+	}
+}
+
+body {
+	// // smoothScrolling
+	// overflow-x: hidden;
+	// overflow-y: scroll;
+	// // 
+
+	// // // prevent vertical scroll up refresh behavior
+	// // overscroll-behavior: none;
+	// // //
+}
+
+// [data-scroll-container] {
+
+// 	@include mq('medium') {
+// 		// smoothscrolling
+		
+// 		overflow: hidden;
+// 		position: fixed;
+// 		width: 100%;
+// 		top: 0;
+// 		left: 0;
+		
+// 		perspective: 1000;
+// 		will-change: transform;
+// 		backface-visibility: hidden;
+// 		transform-style: preserve-3d;
+
+// 		// smoothscrolling
+// 	}
+
+// }
+
+
+// 
+// not sure on naming convention here, need more modules to form proper naming
+.fw-section,
+.callout {
+	padding: 8vw 0;
+	background-color: map-get($colors, brand-offwhite);
+}
+
+.blurb {
+	max-width: 64rem;
+	padding: 0 2rem;
+	margin: 4vw auto 6vw;
+	text-align: center;
+	h2 {
+		margin-bottom: 2.5vw;
+	}
+	p {
+		line-height: 1.78;
+	}
+}
+// 
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 4vw;
+	max-width: map-get($breakpoints, xlarge);
+	position: relative;
+	&--small {
+
+	}
+}
+
+// mostly used for zoom reveal on lazyloaded images
+.image-wrapper {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 100%;
+	figure {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		// background-color: map-get($colors, brand-tertiary);
+	}
+}
+
+////////////////////////////////////////////
+// Link styles
+////////////////////////////////////////////
+
+a {
+	transition: color .35s ease;
+	color: map-get($colors, brand-primary);
+	&:hover {
+		color: map-get($colors, brand-secondary);
+	}
+}
+
+// 
+.link {
+	
+}

@@ -1,0 +1,50 @@
+.social-channels {
+	position: fixed;
+	z-index: 20;
+	top: 50%;
+	left: 6rem;
+	display: flex;
+	flex-flow: column;
+	opacity: 0;
+	transform: translate3d(-50%, -50%, 0);
+	transition: opacity .35s ease,
+				transform .35s ease;
+	@include mq('medium', max) {
+		display: none;
+	}
+	[data-scroll-direction="down"] & {
+		opacity: 1;
+		transform: translate3d(0, -50%, 0);
+	}
+	li {
+		width: 5.5rem;
+		height: 5.5rem;
+		margin-bottom: 3rem;
+		border-radius: 50%;
+		border: solid 1px rgba(15, 17, 32, 0.15);
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	a {
+		height: 100%;
+		display: flex;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+		background-color: transparent;
+		transition: background-color .35s ease;
+		&:hover {
+			color: white;
+			background-color: map-get($colors, brand-primary);
+		}
+	}
+	svg {
+		width: 100%;
+		height: 100%;
+		max-width: 1.6rem;
+		max-height: 1.6rem;
+		transition: fill .35s ease;
+		fill: map-get($colors, brand-primary);
+	}
+}

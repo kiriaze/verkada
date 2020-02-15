@@ -1,0 +1,150 @@
+/////////////////////////
+// Fonts
+/////////////////////////
+
+// 100	Thin (Hairline)
+// 200	Extra Light (Ultra Light)
+// 300	Light
+// 400	Normal
+// 500	Medium
+// 600	Semi Bold (Demi Bold)
+// 700	Bold
+// 800	Extra Bold (Ultra Bold)
+// 900	Black (Heavy)
+
+// @include font-face('Moderat', '../fonts/moderat-regular-italic/Moderat-Regular-Italic', 400, italic);
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+/////////////////////////
+// Heading styles
+/////////////////////////
+
+@for $i from 1 through 6 {
+
+	h#{$i},
+	.h#{$i} {
+		font-family: $header-font;
+		font-style: normal;
+		font-weight: 400;
+		font-stretch: normal;
+
+		word-wrap: break-word;
+		word-break: break-word;
+
+		line-height: 1;
+
+		// text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
+// base typos
+body {
+	font-weight: 400;
+}
+
+.h1,
+h1 {
+	@include fluid-scale(font-size, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xlarge'), 36px, 72px);
+
+	@include mq('medium') {
+	}
+	@include mq('large') {
+	}
+	@include mq('xlarge') {
+	}
+}
+
+.h2,
+h2 {
+	@include fluid-scale(font-size, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xlarge'), 25px, 48px);
+	@include mq('medium') {
+	}
+	@include mq('large') {
+	}
+}
+
+.h3,
+h3 {
+	@include fluid-scale(font-size, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xlarge'), 20px, 30px);
+	@include mq('medium') {
+	}
+	@include mq('large') {
+	}
+}
+
+.h4,
+h4 {
+	letter-spacing: -.05rem;
+	@include fluid-scale(font-size, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xlarge'), 18px, 24px);
+	@include mq('medium') {
+
+	}
+	@include mq('large') {
+
+	}
+}
+
+.h5,
+h5 {
+	@include fluid-scale(font-size, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xlarge'), 16px, 20px);
+	@include mq('medium') {
+	}
+	@include mq('large') {
+	}
+}
+
+.h6,
+h6 {
+	@include mq('medium') {
+
+	}
+	@include mq('large') {
+
+	}
+}
+
+p {
+	letter-spacing: -.05rem;
+	color: map-get($colors, brand-text);
+	@include fluid-scale(font-size, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xlarge'), 14px, 18px);
+	.dark & {
+		color: white;
+	}
+}
+
+.lead {
+	font-size: 2rem;
+	margin-bottom: 5rem;
+	@include mq('small') {
+
+	}
+}
+
+.eyebrow {
+
+}
+
+.byline {
+	@include mq('small') {
+
+	}
+}
+
+.text-align {
+	@include mq('medium') {
+		&--left {
+			text-align: left;
+		}
+		&--right {
+			text-align: right;
+		}
+		&--center {
+			text-align: center;
+		}
+		&--justify {
+			text-align: justify;
+		}
+	}
+}

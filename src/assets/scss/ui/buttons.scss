@@ -1,0 +1,40 @@
+.button {
+	width: 100%;
+	color: white;
+	font-size: 1rem;
+	font-weight: 700;
+	max-width: 24rem;
+	text-align: center;
+	line-height: 5.5rem;
+	border-radius: 3.2rem;
+	display: inline-block;
+	text-transform: uppercase;
+	background-color: map-get($colors, brand-primary);
+	transition: color .35s ease, background-color .35s ease;
+	&:hover {
+		color: white;
+		background-color: map-get($colors, brand-secondary);
+	}
+	&__ghost {
+		background-color: transparent;
+		color: map-get($colors, brand-primary);
+		border: .1rem solid map-get($colors, base-light);
+		&:hover {
+			color: white;
+			background-color: map-get($colors, brand-primary);
+		}
+	}
+	&__inverted {
+		background-color: map-get($colors, brand-secondary);
+		&:hover {
+			color: white;
+			background-color: map-get($colors, brand-primary);
+		}
+	}
+	.dark & {
+		&:hover {
+			background-color: white;
+			color: map-get($colors, brand-primary);
+		}
+	}
+}

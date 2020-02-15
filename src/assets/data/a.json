@@ -1,0 +1,8 @@
+{
+  "title": "A json data",
+  "clients": [
+  	"foo",
+  	"bar",
+  	"choo"
+  	]
+}

@@ -1,0 +1,72 @@
+.hero {
+	position: relative;
+	@include mq('medium') {
+		min-height: 100vh;
+	}
+	.container {
+		display: flex;
+		padding-top: 4vw;
+		align-items: center;
+		h1 {
+			line-height: normal;
+			letter-spacing: -.2rem;
+		}
+		p {
+			margin: 4vw 0;
+		}
+	}
+	.row {
+		@include mq('medium', max) {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	&__content {
+		@include mq('medium') {
+			flex-grow: 0;
+			flex-basis: 50%;
+			max-width: 50%;
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+	}
+	&__circle-line {
+		right: 0;
+		bottom: 0;
+		width: 75vw;
+		height: 75vw;
+		position: absolute;
+		pointer-events: none;
+		background: url(../vectors/circle-line.svg) 100% 0 / contain no-repeat;
+
+	}
+	&__video-cta {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 50%;
+		height: 50%;
+		color: white;
+		display: flex;
+		align-items: center;
+		pointer-events: auto;
+		justify-content: center;
+		background-color: map-get($colors, brand-secondary);
+		a {
+			color: transparent;
+			display: flex;
+			max-width: 6vw;
+			max-height: 8vw;
+			&:hover {
+				color: white;
+			}
+		}
+	}
+	.scroll-cta {
+		margin-top: 8vw;
+		margin-bottom: 8vw;
+		// margin-bottom: 8rem;
+		// @include mq('medium') {
+		// }
+	}
+}
