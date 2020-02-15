@@ -26,6 +26,8 @@ Run `npm run deploy` to deploy the production ready bundle to location defined w
 - Uses composer for slim/twig templating, custom dynamic php routing off of index.php for other pages, and compiles templates to html, with output(dist) also in html - so no need for server to house composer/vendor.
 	- Also, pages have their own directory for pretty permalinks.
 - Update .htaccess and .htpasswd respectively if needed, remember to hash the htpasswd and update username if needed.
+- To deploy to github pages; `git subtree push --prefix dist origin gh-pages`
+	- Might need to change some relative paths from root in regards to the repo name / gh-branch; e.g. assets would be pointing to kiriaze.github.com/verkada as root, so kiriaze.github.com/verkada/assets/css/etc..
 ---
 
 ## License

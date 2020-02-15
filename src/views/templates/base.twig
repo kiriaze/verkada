@@ -29,7 +29,7 @@
 
 		{% block head %}
 			{% if data.env == 'production' %}
-				<link rel="stylesheet" href="/{{ data.portPath }}/css/app.bundle.css?{{ data.timestamp }}">
+				<link rel="stylesheet" href="{{ data.portPath }}/css/app.bundle.css?{{ data.timestamp }}">
 			{% endif %}
 		{% endblock %}
 		
