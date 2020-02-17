@@ -25,7 +25,8 @@
 	}
 	&__content {
 		@include mq('medium') {
-			max-width: 80rem;
+			// max-width: 80rem;
+			max-width: 50%;
 		}
 	}
 	&__circle-line {
@@ -38,7 +39,12 @@
 		position: absolute;
 		pointer-events: none;
 		background: url(../vectors/circle-line.svg) 100% 0 / contain no-repeat;
-
+		&.revealed {
+			.hero__video-cta {
+				transition-delay: .9s;
+				transform: scale(1, 1);
+			}
+		}
 	}
 	&__video-cta {
 		position: absolute;
@@ -52,6 +58,9 @@
 		pointer-events: auto;
 		justify-content: center;
 		background-color: map-get($colors, brand-secondary);
+		transform-origin: 0 100%;
+		transform: scale(1, 0);
+		transition: transform 1.1s cubic-bezier(.23,1,.32,1);
 		a {
 			color: transparent;
 			display: flex;
@@ -67,6 +76,9 @@
 		}
 	}
 	.scroll-cta {
-		margin: 20rem 0 4vw;
+		margin: 5rem 0 4vw;
+		@include mq('medium') {
+			margin: 20rem 0 4vw;
+		}
 	}
 }
