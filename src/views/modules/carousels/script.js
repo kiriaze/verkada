@@ -32,7 +32,7 @@ const carousels = () => {
 	// 	}
 	// }
 
-	// single item carousels
+	// carousels
 	[...document.querySelectorAll('[data-carousel="news"]')].map((el, index) => {
 		let swiperInstance = new Swiper(el, {
 			speed: 800,
@@ -69,6 +69,9 @@ const carousels = () => {
 			// 	prevEl: '.carousel__prev',
 			// },
 			breakpoints: {
+				1920: {
+					slidesPerView: 6,
+				},
 				1220: {
 					slidesPerView: 4,
 				},

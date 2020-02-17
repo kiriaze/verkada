@@ -1,29 +1,31 @@
 .hero {
+	display: flex;
+	padding-top: 15rem;
 	position: relative;
 	@include mq('medium') {
-		min-height: 100vh;
+		padding-top: 30rem;
+		min-height: 100vh; // assuming fh vs 128rem comp
 	}
 	.container {
-		display: flex;
-		padding-top: 4vw;
-		align-items: center;
+		margin: 0;
+		padding: 0 4vw;
+		@include mq('xlarge') {
+			margin-left: calc(12.5rem + 5%);
+		}
 		h1 {
 			line-height: normal;
 			letter-spacing: -.2rem;
 		}
 		p {
-			margin: 4vw 0;
-		}
-	}
-	.row {
-		@include mq('medium', max) {
-			display: block;
-			margin: 0 auto;
+			margin: 4rem 0 3rem;
+			@include mq('medium') {
+				margin: 8rem 0 7rem;
+			}
 		}
 	}
 	&__content {
 		@include mq('medium') {
-			@include grid-col(6/12);
+			max-width: 80rem;
 		}
 	}
 	&__circle-line {
@@ -31,6 +33,8 @@
 		bottom: 0;
 		width: 75vw;
 		height: 75vw;
+		max-width: 128rem;
+		max-height: 128rem;
 		position: absolute;
 		pointer-events: none;
 		background: url(../vectors/circle-line.svg) 100% 0 / contain no-repeat;
@@ -53,13 +57,16 @@
 			display: flex;
 			max-width: 6vw;
 			max-height: 8vw;
+			@include mq('large') {
+				max-width: 6.4rem;
+				max-height: 7.8rem;
+			}
 			&:hover {
 				color: white;
 			}
 		}
 	}
 	.scroll-cta {
-		margin-top: 8vw;
-		margin-bottom: 8vw;
+		margin: 20rem 0 4vw;
 	}
 }

@@ -1,25 +1,27 @@
 .header {
-	// position: fixed;
-	// z-index: 10;
-	// top: 0;
-	// left: 0;
-	// right: 0;
 	position: relative;
 	padding: 0 4vw;
 	font-weight: 700;
 	font-size: 1.2rem;
 	letter-spacing: .3rem;
 	text-transform: uppercase;
+	
+	// position: fixed; // remove gradient effect
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
 	.logo {
 		display: flex;
+		margin-right: 5%;
 		max-width: 12.5rem;
 		max-height: 1.6rem;
-		margin-right: 7vw;
 	}
 	.user-actions {
-		justify-content: flex-end;
-		position: relative;
 		z-index: 1;
+		position: relative;
+		justify-content: flex-end;
 		@include mq('medium', max) {
 			display: none;
 		}
@@ -31,10 +33,13 @@
 	}
 	nav {
 		display: flex;
-		line-height: 16rem;
 		white-space: nowrap;
 		align-items: center;
 		justify-content: space-between;
+		line-height: 10rem;
+		@include mq('medium') {
+			line-height: 16rem;
+		}
 		ul {
 			display: flex;
 			flex-grow: 1;

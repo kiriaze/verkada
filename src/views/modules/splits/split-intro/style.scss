@@ -1,37 +1,37 @@
 .split-intro {
 	color: white;
-	padding: 6vw 0;
 	position: relative;
 	overflow: hidden;
+	@include fluid-scale(padding-top padding-bottom, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xxxlarge'), 140px, 320px); // using fluid padding over fh
 	.container {
 		display: flex;
-		min-height: 100vh;
 		align-items: center;
+		// min-height: 100vh; // assuming fh vs 128rem comp
 		h2 {
-			@include mq('medium', max) {
+			@include mq('large', max) {
 				line-height: 1.4;
 			}
 		}
 		p {
 			margin: 4vw 0 6vw;
-			@include mq('medium') {
-				margin: 4vw 0;
+			@include mq('large') {
+				margin: 7rem 0;
 			}
 		}
 		.row {
-			@include mq('medium', max) {
+			width: 100%;
+			@include mq('large', max) {
 				display: block;
 				margin: 0 auto;
-				max-width: 48rem;
+				max-width: 58rem;
 			}
 		}
 	}
 	&__content {
 		width: 100%;
-		max-width: 48rem;
-		margin: 0 auto 8vw;
+		margin: 0 auto;
 		text-align: center;
-		@include mq('medium') {
+		@include mq('large') {
 			text-align: left;
 			@include grid-col(4/12);
 		}
@@ -39,7 +39,7 @@
 	&__media {
 		margin-top: 5vw;
 		width: 100%;
-		@include mq('medium') {
+		@include mq('large') {
 			margin-top: 0;
 			@include grid-col(8/12);
 			@include grid-shift(1/12);
@@ -66,12 +66,12 @@
 		justify-content: center;
 		transform: translate3d(50%, -50%, 0);
 		box-shadow: 0 4rem 5.5rem 0 rgba(205, 204, 216, 0.5);
-		@include mq('medium') {
+		@include mq('large') {
 			display: flex;
 		}
 		svg {
-			width: 1.4rem;
-			height: 1.4rem;
+			width: 1.5rem;
+			height: 1.5rem;
 			transition: transform .35s ease;
 		}
 		&:hover {
@@ -88,7 +88,7 @@
 		z-index: -1;
 		position: absolute;
 		background-color: map-get($colors, brand-secondary);
-		@include mq('medium') {
+		@include mq('large') {
 			width: 75vw;
 			max-width: 62.5%;
 		}

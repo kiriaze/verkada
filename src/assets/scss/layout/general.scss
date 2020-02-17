@@ -58,30 +58,38 @@ body {
 // not sure on naming convention here, need more modules to form proper naming
 .fw-section,
 .callout {
-	padding: 8vw 0;
 	background-color: map-get($colors, brand-offwhite);
+	@include fluid-scale(padding-top padding-bottom, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xxxlarge'), 100px, 160px); // using fluid padding over fh
 }
 
 .blurb {
-	max-width: 64rem;
-	padding: 0 2rem;
-	margin: 4vw auto 6vw;
+	max-width: 59rem;
+	margin: 0 auto 4rem;
 	text-align: center;
+	@include mq('medium') {
+		margin: 0 auto 8rem;
+	}
 	h2 {
-		margin-bottom: 2.5vw;
+		margin-bottom: 2.5rem;
+		@include mq('medium') {
+			margin-bottom: 4.5rem;
+		}
 	}
 	p {
-		line-height: 1.78;
+		
 	}
 }
 // 
 
+$containerWidth: map-get($breakpoints, xlarge);
 .container {
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 4vw;
-	max-width: map-get($breakpoints, xlarge);
 	position: relative;
+	padding: 0 4vw;
+	@include mq('xlarge') {
+		max-width: calc(#{$containerWidth} + 8vw);
+	}
 	&--small {
 
 	}

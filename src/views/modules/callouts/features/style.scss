@@ -3,20 +3,26 @@
 // looking at project holistically with a multitude of modules
 .features {
 	display: flex;
-	padding: 7rem;
 	margin: 0 auto;
-	max-width: 128rem;
+	flex-flow: column;
 	text-align: center;
 	background-color: white;
 	justify-content: space-between;
-	box-shadow: 0px 40px 22px 0px rgba(0, 0, 0, 0.07);
-	@include mq('medium', max) {
-		margin: 0 4vw;
-		flex-flow: column;
+	box-shadow: 0px 50px 50px 10px rgba(0, 0, 0, 0.13);
+	@include mq('medium') {
+		padding: 7rem;
+		max-width: 100%;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+	@include mq('xlarge') {
+		flex-flow: row nowrap;
+		justify-content: space-between;
 	}
 	li {
 		padding: 0 1vw;
-		@include mq('medium', max) {
+		@include mq('xlarge', max) {
+			padding: 0 3vw;
 			margin-bottom: 5rem;
 			&:last-child {
 				// margin-bottom: 0;
@@ -34,8 +40,8 @@
 		}
 		p {
 			max-width: 29rem;
-			margin: 0 auto 6.5vw;
-			@include fluid-scale(line-height, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xlarge'), 1.5, 2);
+			margin: 0 auto 10rem;
+			@include fluid-scale(line-height, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xlarge'), 21px, 28px);
 			@include fluid-scale(font-size, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xlarge'), 14px, 16px);
 		}
 	}

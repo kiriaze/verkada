@@ -106,6 +106,7 @@ h6 {
 }
 
 p {
+	line-height: 1.78;
 	letter-spacing: -.05rem;
 	color: map-get($colors, brand-text);
 	@include fluid-scale(font-size, map-get($breakpoints, 'tiny'), map-get($breakpoints, 'xlarge'), 14px, 18px);
