@@ -78,12 +78,12 @@
 
 [data-skrolly^="fade-up"],
 [data-skrolly-group^="fade-up"] > * {
-	transform: translate3d(0, 1.5rem, 0);
+	transform: translate3d(0, 2rem, 0);
 }
 
 [data-skrolly^="fade-down"],
 [data-skrolly-group^="fade-down"] > * {
-	transform: translate3d(0, -1.5rem, 0);
+	transform: translate3d(0, -2rem, 0);
 }
 
 [data-skrolly^="zoom-out"],
